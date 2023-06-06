@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "id-prd-dcn-cbk-core-baaskit-tfstate"
+    bucket = "baaskit-fvelasco-tfstate"
     key    = "vpc/vpc.tfstate"
     region = "us-east-1"
   }

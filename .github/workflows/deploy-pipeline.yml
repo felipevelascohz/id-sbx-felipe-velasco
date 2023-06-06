@@ -9,11 +9,11 @@ env:
     TF_VAR_repo_url: ${{ github.repositoryUrl }}
     TF_VAR_repo_commit: ${{ github.sha }} 
 jobs:
-    #cancel-workflows:
-    #    runs-on: ubuntu-latest
-    #    steps:
-    #        - name: Cancel Workflow Action
-    #          uses: styfle/cancel-workflow-action@0.11.0
+    cancel-workflows:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Cancel Workflow Action
+              uses: styfle/cancel-workflow-action@0.11.0
     deploy:
         defaults:
           run:

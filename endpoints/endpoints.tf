@@ -2,7 +2,7 @@
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
-    bucket = "id-prd-dcn-cbk-core-baaskit-tfstate"
+    bucket = "baaskit-fvelasco-tfstate"
     key    = "vpc/vpc.tfstate"
     region = "us-east-1"
   }
@@ -11,7 +11,7 @@ data "terraform_remote_state" "vpc" {
 data "terraform_remote_state" "sg" {
   backend = "s3"
   config = {
-    bucket = "id-prd-dcn-cbk-core-baaskit-tfstate"
+    bucket = "baaskit-fvelasco-tfstate"
     key    = "security-groups/security-groups.tfstate"
     region = "us-east-1"
   }
