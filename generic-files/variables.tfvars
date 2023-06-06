@@ -1,0 +1,6 @@
+region = "us-east-1"
+profile = "id-prd-dcn-cbk-core"
+project_name = "id-prd-dcn-cbk-core-baaskit"
+ambiente = "Investigación y Desarrollo"
+owner = "Felipe Velasco"
+ownerEmail= "felipe.velasco@baaskit.com"
