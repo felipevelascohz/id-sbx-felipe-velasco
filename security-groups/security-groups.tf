@@ -9,15 +9,15 @@ data "terraform_remote_state" "vpc" {
 
 
 module "Allow_HTTPS" {
-  source = "terraform-aws-modules/security-group/aws"
+  source  = "terraform-aws-modules/security-group/aws"
   version = "5.0.0"
 
   name        = var.security_group_name
   description = "Security group para acceder a los endpoints desde dentro de la vpc"
   vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id
 
-  ingress_cidr_blocks      = [data.terraform_remote_state.vpc.outputs.vpc_cidr]
-  ingress_rules            = ["https-443-tcp"]
-  egress_cidr_blocks       = ["0.0.0.0/0"]
-  egress_rules             = ["all-all"]
+  ingress_cidr_blocks = [data.terraform_remote_state.vpc.outputs.vpc_cidr]
+  ingress_rules       = ["https-443-tcp"]
+  egress_cidr_blocks  = ["0.0.0.0/0"]
+  egress_rules        = ["all-all"]
 }

@@ -18,7 +18,7 @@ data "terraform_remote_state" "sg" {
 }
 
 module "endpoints" {
-  source = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
+  source  = "terraform-aws-modules/vpc/aws//modules/vpc-endpoints"
   version = "5.0.0"
 
   vpc_id             = data.terraform_remote_state.vpc.outputs.vpc_id
